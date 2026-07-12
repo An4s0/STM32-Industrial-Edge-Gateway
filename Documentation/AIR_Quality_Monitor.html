@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Air Quality Monitor</title>
+    <meta http-equiv="refresh" content="10" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css"
+    />
+
+    <style>
+      :root {
+        --bg: #0c0e11;
+        --border: #23272d;
+        --text: #e7e9ec;
+        --sub: #8a9099;
+        --muted: #565b63;
+        --accent: #3ddc84;
+        --accent-bg: rgba(61, 220, 132, 0.12);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        padding: clamp(24px, 5vw, 60px);
+        background: var(--bg);
+        color: var(--text);
+        font:
+          500 16px "Inter",
+          "Tajawal",
+          sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .page-header,
+      .hero,
+      .metric-label,
+      .status {
+        display: flex;
+        align-items: center;
+      }
+
+      .page-header {
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 24px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .page-header h1 {
+        font-size: clamp(21px, 3vw, 27px);
+        font-weight: 600;
+      }
+
+      .page-header span {
+        font-size: clamp(11px, 3vw, 16px);
+      }
+
+      .page-header span,
+      .hero-sub,
+      .metric-unit,
+      .footer-note {
+        font-family: "JetBrains Mono", "Tajawal", monospace;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .hero {
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .hero-label {
+        font-size: clamp(15px, 2vw, 20px);
+        color: var(--sub);
+      }
+
+      .hero-sub {
+        margin-top: 6px;
+        letter-spacing: 0.08em;
+        font-size: clamp(12px, 2vw, 16px);
+      }
+
+      .hero-value {
+        margin-top: 12px;
+        font:
+          500 clamp(90px, 13vw, 150px) "JetBrains Mono",
+          monospace;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .status {
+        gap: 14px;
+        padding: clamp(10px, 2vw, 14px) clamp(20px, 2vw, 26px);
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        background: var(--accent-bg);
+      }
+
+      .status-dot {
+        width: 14px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 18px var(--accent);
+      }
+
+      .status-text {
+        color: var(--accent);
+        font-size: clamp(16px, 2vw, 22px);
+        font-weight: 600;
+      }
+
+      .bottom-section {
+        margin-top: 50px;
+        padding-top: 40px;
+        border-top: 1px solid var(--border);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 46px 0;
+      }
+
+      .metric {
+        padding: 0 24px;
+        border-inline-start: 1px solid var(--border);
+      }
+
+      .metric:first-child,
+      .metric:nth-child(4) {
+        border-inline-start: none;
+        padding-inline-start: 0;
+      }
+
+      .metric-label {
+        gap: 8px;
+        margin-bottom: 10px;
+        color: var(--sub);
+        font-size: 15px;
+      }
+
+      .metric-label i {
+        font-size: 20px;
+      }
+
+      .metric-value {
+        font:
+          500 clamp(28px, 3vw, 36px) "JetBrains Mono",
+          monospace;
+        letter-spacing: -0.02em;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .metric-unit {
+        margin-inline-start: 4px;
+        font-size: 0.55em;
+      }
+
+      .footer-note {
+        padding-top: 32px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 28px;
+        }
+
+        .page-header,
+        .hero {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 20px;
+        }
+
+        .page-header span {
+          margin-top: 4px;
+        }
+
+        .hero > div:first-child {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-value {
+          font-size: 90px;
+        }
+
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 28px;
+        }
+
+        .metric {
+          border: none;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <header class="page-header">
+        <h1 id="tr-title">Air Quality Monitor</h1>
+        <span>
+          <span id="tr-updated-label">Last updated:</span>
+          <span id="updated"><!--#updated--></span>
+        </span>
+      </header>
+
+      <section class="hero">
+        <div>
+          <div class="hero-label" id="tr-aqi">Air Quality Index (US)</div>
+          <div class="hero-sub">AQI-US</div>
+          <div class="hero-value"><!--#aqi--></div>
+        </div>
+
+        <div class="status">
+          <span class="status-dot"></span>
+          <span class="status-text" id="tr-status"></span>
+        </div>
+      </section>
+    </div>
+
+    <section class="bottom-section">
+      <div class="grid">
+        <div class="metric">
+          <div class="metric-label"><i class="ti ti-wind"></i>PM2.5</div>
+          <div class="metric-value">
+            <!--#pm25--><span class="metric-unit">μg/m³</span>
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label"><i class="ti ti-wind"></i>PM10</div>
+          <div class="metric-value">
+            <!--#pm10--><span class="metric-unit">μg/m³</span>
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label"><i class="ti ti-wind"></i>PM1</div>
+          <div class="metric-value">
+            <!--#pm1--><span class="metric-unit">μg/m³</span>
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">
+            <i class="ti ti-temperature"></i
+            ><span id="tr-temp">Temperature</span>
+          </div>
+          <div class="metric-value">
+            <!--#temp--><span class="metric-unit">°C</span>
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">
+            <i class="ti ti-droplet"></i><span id="tr-hum">Humidity</span>
+          </div>
+          <div class="metric-value">
+            <!--#hum--><span class="metric-unit">%</span>
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">
+            <i class="ti ti-gauge"></i><span id="tr-press">Pressure</span>
+          </div>
+          <div class="metric-value">
+            <!--#press--><span class="metric-unit">hPa</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-note" id="tr-footer">
+        Sensor data refreshes automatically
+      </div>
+    </section>
+
+    <script>
+      let sec = parseInt(document.getElementById("updated").textContent) || 0;
+      let isArabic = false;
+
+      function getAQIStatus(aqi) {
+        if (aqi <= 50) return 0;
+        if (aqi <= 100) return 1;
+        if (aqi <= 150) return 2;
+        if (aqi <= 200) return 3;
+        if (aqi <= 300) return 4;
+        return 5;
+      }
+
+      const aqiText = {
+        en: [
+          "Good",
+          "Moderate",
+          "Unhealthy for Sensitive Groups",
+          "Unhealthy",
+          "Very Unhealthy",
+          "Hazardous",
+        ],
+        ar: [
+          "جيد",
+          "متوسط",
+          "غير صحي للفئات الحساسة",
+          "غير صحي",
+          "غير صحي جدًا",
+          "خطير",
+        ],
+      };
+
+      const colors = [
+        "#00e400",
+        "#ffff00",
+        "#ff7e00",
+        "#ff0000",
+        "#8f3f97",
+        "#7e0023",
+      ];
+
+      const translations = {
+        en: {
+          title: "Air Quality Monitor",
+          updatedLabel: "Last updated:",
+          aqi: "Air Quality Index (US)",
+          temp: "Temperature",
+          hum: "Humidity",
+          press: "Pressure",
+          footer: "Sensor data refreshes automatically",
+        },
+        ar: {
+          title: "مراقب جودة الهواء",
+          updatedLabel: "آخر تحديث:",
+          aqi: "مؤشر جودة الهواء (الأمريكي)",
+          temp: "درجة الحرارة",
+          hum: "الرطوبة",
+          press: "الضغط",
+          footer: "يتم تحديث بيانات المستشعر تلقائياً",
+        },
+      };
+
+      function updateLanguage() {
+        const lang = isArabic ? "ar" : "en";
+
+        document.documentElement.lang = lang;
+        document.documentElement.dir = isArabic ? "rtl" : "ltr";
+
+        document.getElementById("tr-title").textContent =
+          translations[lang].title;
+        document.getElementById("tr-updated-label").textContent =
+          translations[lang].updatedLabel;
+        document.getElementById("tr-aqi").textContent = translations[lang].aqi;
+        document.getElementById("tr-temp").textContent =
+          translations[lang].temp;
+        document.getElementById("tr-hum").textContent = translations[lang].hum;
+        document.getElementById("tr-press").textContent =
+          translations[lang].press;
+        document.getElementById("tr-footer").textContent =
+          translations[lang].footer;
+
+        const aqi = parseInt(
+          document.querySelector(".hero-value").textContent.trim(),
+        );
+
+        const status = getAQIStatus(aqi);
+
+        const statusBox = document.querySelector(".status");
+        const statusDot = document.querySelector(".status-dot");
+        const statusText = document.querySelector(".status-text");
+
+        statusText.textContent = aqiText[lang][status];
+
+        const color = colors[status];
+
+        statusBox.style.borderColor = color;
+        statusBox.style.backgroundColor = color + "22";
+        statusDot.style.backgroundColor = color;
+        statusDot.style.boxShadow = `0 0 18px ${color}`;
+        statusText.style.color = color;
+
+        updateTimeText();
+      }
+
+      function updateTimeText() {
+        let text = "";
+
+        if (!isArabic) {
+          if (sec < 60)
+            text = sec + " second" + (sec === 1 ? "" : "s") + " ago";
+          else if (sec < 3600)
+            text =
+              Math.floor(sec / 60) +
+              " minute" +
+              (Math.floor(sec / 60) === 1 ? "" : "s") +
+              " ago";
+          else
+            text =
+              Math.floor(sec / 3600) +
+              " hour" +
+              (Math.floor(sec / 3600) === 1 ? "" : "s") +
+              " ago";
+        } else {
+          if (sec < 60) {
+            if (sec === 1) text = "منذ ثانية واحدة";
+            else if (sec === 2) text = "منذ ثانيتين";
+            else if (sec <= 10) text = "منذ " + sec + " ثوانٍ";
+            else text = "منذ " + sec + " ثانية";
+          } else if (sec < 3600) {
+            const m = Math.floor(sec / 60);
+
+            if (m === 1) text = "منذ دقيقة واحدة";
+            else if (m === 2) text = "منذ دقيقتين";
+            else if (m <= 10) text = "منذ " + m + " دقائق";
+            else text = "منذ " + m + " دقيقة";
+          } else {
+            const h = Math.floor(sec / 3600);
+
+            if (h === 1) text = "منذ ساعة واحدة";
+            else if (h === 2) text = "منذ ساعتين";
+            else if (h <= 10) text = "منذ " + h + " ساعات";
+            else text = "منذ " + h + " ساعة";
+          }
+        }
+
+        document.getElementById("updated").textContent = text;
+      }
+
+      function updateTime() {
+        updateTimeText();
+        sec++;
+      }
+
+      updateLanguage();
+      updateTime();
+
+      setInterval(updateTime, 1000);
+
+      setInterval(() => {
+        isArabic = !isArabic;
+        updateLanguage();
+      }, 5000);
+    </script>
+  </body>
+</html>
