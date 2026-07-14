@@ -36,12 +36,10 @@
 
 ### Power Filtering
 
-- VDDA Ferrite Bead: 490-1014-1-ND
+- VDDA Ferrite Bead: BLM18AG601SN1D
 - Decoupling Capacitors:
   - 100nF
   - 1uF
-  - 4.7uF
-  - 10uF
 
 ### Boot Configuration
 
@@ -52,24 +50,21 @@
 
 - Reset Button
 - Pull-up Resistor
-- Reset Capacitor
 
----
-
-# 3. SWD Debug Interface
+### SWD Debug Interface
 
 - SWD Header
   - SWDIO
   - SWCLK
   - NRST
-  - 3.3V
   - GND
+  - 3.3V
 
 - ST-Link V2 Programmer
 
 ---
 
-# 4. Ethernet Interface
+# 3. Ethernet Interface
 
 ### Ethernet PHY
 
@@ -93,12 +88,11 @@
 
 ### Indicators
 
-- Ethernet Link LED
-- Ethernet Activity LED
+- Ethernet Link/Activity LED
 
 ---
 
-# 5. RS485 / Modbus RTU
+# 4. RS485 / Modbus RTU
 
 ### Transceiver
 
@@ -121,9 +115,12 @@
 - Termination Jumper
 - Bias Resistors
 
+### Indicator
+
+- Modbus LED
 ---
 
-# 6. microSD Storage
+# 5. microSD Storage
 
 ### Connector
 
@@ -138,48 +135,3 @@
 ### Indicator
 
 - SD Activity LED
-
----
-
-# 7. Status Indicators
-
-### LEDs
-
-- Power LED
-- Modbus LED
-- SD Activity LED
-- Ethernet LED
-
-### Each LED Requires
-
-- Current Limiting Resistor
-
----
-
-# 8. Mechanical & PCB
-
-- Mounting Holes ×4
-- Test Points
-- PCB Fiducials
-- Board Label / Revision
-
----
-
-# 9. Common Components
-
-## Resistors
-
-- Pull-up Resistors
-- Pull-down Resistors
-- LED Current Limiting Resistors
-- Ethernet Bias Resistors
-- RS485 Bias Resistors
-- 120Ω Termination Resistor
-
-## Capacitors
-
-- 100nF Ceramic Capacitors
-- 1uF Capacitors
-- 4.7uF Capacitors
-- 10uF Capacitors
-- Crystal Load Capacitors
