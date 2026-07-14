@@ -9,12 +9,12 @@
 ### Protection
 
 - Fuse
-- Reverse Polarity Protection: IRLML6402
 - TVS Diode: SMAF14ATR
+- Reverse Polarity Protection: IRLML6402
 
 ### Voltage Regulation
 
-- Buck Converter: MP1584EN (Input → 5V)
+- Buck Converter: MP2338GTL (Input → 5V)
 - LDO: TLV76733DRVR (5V → 3.3V)
 
 ### Indicator
@@ -146,11 +146,9 @@
 ### LEDs
 
 - Power LED
-- Modbus RX LED
-- Modbus TX LED
+- Modbus LED
 - SD Activity LED
-- Ethernet Link LED
-- Ethernet Activity LED
+- Ethernet LED
 
 ### Each LED Requires
 
