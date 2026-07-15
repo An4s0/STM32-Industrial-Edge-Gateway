@@ -13930,6 +13930,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 193.04) (xy 66.04 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "100c2333-6322-4b82-86a5-97a33ec8195c")
+	)
+	(wire
+		(pts
 			(xy 77.47 121.92) (xy 78.74 121.92)
 		)
 		(stroke
@@ -15397,16 +15407,6 @@
 			(type default)
 		)
 		(uuid "9116385a-bd11-47a5-bbc7-cb973d29ef7f")
-	)
-	(wire
-		(pts
-			(xy 63.5 193.04) (xy 66.04 193.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92c3ea84-49b7-4b73-8921-b8706b4ec487")
 	)
 	(wire
 		(pts
@@ -20548,6 +20548,84 @@
 			(project "STM32_Industrial_Edge_Gateway_v0.2.0"
 				(path "/abc15c43-296c-4c96-9fe3-be02bbc91336"
 					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 71.12 251.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6041fe07-6a68-425a-bab9-7bb71dabfb26")
+		(property "Reference" "#PWR067"
+			(at 71.12 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 71.12 256.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 71.12 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 71.12 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6be7a2af-aefc-4b4b-bc2e-25c73cf23aa0")
+		)
+		(instances
+			(project "STM32_Industrial_Edge_Gateway_v0.2.0"
+				(path "/abc15c43-296c-4c96-9fe3-be02bbc91336"
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)

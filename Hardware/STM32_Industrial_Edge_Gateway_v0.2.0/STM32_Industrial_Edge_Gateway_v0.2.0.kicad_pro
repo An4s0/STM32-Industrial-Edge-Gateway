@@ -260,7 +260,12 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "pin_not_connected|508000|2209800|058012b9-e897-4266-9a8c-95999a9c8923|00000000-0000-0000-0000-000000000000|/abc15c43-296c-4c96-9fe3-be02bbc91336|/abc15c43-296c-4c96-9fe3-be02bbc91336|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -648,7 +653,7 @@
         "uuid": "abc15c43-296c-4c96-9fe3-be02bbc91336"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR67",
     "variants": []
   },
   "sheets": [
