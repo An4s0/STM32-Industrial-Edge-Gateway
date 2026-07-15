@@ -4,13 +4,13 @@
 
 ### Power Input
 
-- DC Power Jack (5.5 x 2.1mm)
+- DC Barrel Jack (5.5 × 2.1mm)
 
 ### Protection
 
-- Fuse
-- TVS Diode: SMAF14ATR
-- Reverse Polarity Protection: IRLML6402
+- 2A Fuse
+- TVS Diode: SMAJ15A
+- Reverse Polarity Protection: AO3407A
 
 ### Voltage Regulation
 
@@ -19,11 +19,11 @@
 
 ### Indicator
 
-- Power LED + Current Limiting Resistor
+- Power LED
 
 ---
 
-# 2. STM32 MCU Core
+## 2. STM32 MCU Core
 
 ### Microcontroller
 
@@ -31,7 +31,7 @@
 
 ### Clock
 
-- HSE Crystal: ECS-80-10-33-CHN-TR3 (8MHz)
+- HSE Crystal: SMD3225 (8MHz)
 - Crystal Load Capacitors
 
 ### Power Filtering
@@ -64,39 +64,40 @@
 
 ---
 
-# 3. Ethernet Interface
+## 3. Ethernet Interface
 
 ### Ethernet PHY
 
-- LAN8742A-CZ-CT-ND
+- LAN8742A
 
 ### PHY Clock
 
 - 25MHz Crystal:
-  - SXT32420AA48-25.000M
+  - Abracon ABM8G
 - Crystal Load Capacitors
 
 ### Ethernet Connector
 
 - RJ45 with Integrated Magnetics:
-  - 277-1663966-ND
+  - HanRun HR911105A
 
 ### Protection
 
 - Ethernet TVS Protection:
-  - SRV05-4HTG
+  - SRV05-4
 
 ### Indicators
 
-- Ethernet Link/Activity LED
+- Ethernet Link LED
+- Ethernet Activity LED
 
 ---
 
-# 4. RS485 / Modbus RTU
+## 4. RS485 / Modbus RTU
 
 ### Transceiver
 
-- MAX3485ECSA+CT-ND
+- MAX3485ESA
 
 ### Connector
 
@@ -107,12 +108,11 @@
 ### Protection
 
 - RS485 TVS:
-  - SM712.TCT
+  - SM712
 
 ### Bus Components
 
 - 120Ω Termination Resistor
-- Termination Jumper
 - Bias Resistors
 
 ### Indicator
@@ -120,12 +120,12 @@
 - Modbus LED
 ---
 
-# 5. microSD Storage
+## 5. microSD Storage
 
 ### Connector
 
 - microSD Socket:
-  - MCSP-Q1-08-A-SG-T/R
+  - Hirose DM3AT
 
 ### Support Components
 
