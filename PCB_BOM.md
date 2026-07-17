@@ -8,7 +8,7 @@
 
 ### Protection
 
-- 2A Fuse
+- 1A Fuse
 - TVS Diode: SMAJ15A
 - Reverse Polarity Protection: AO3407A
 
