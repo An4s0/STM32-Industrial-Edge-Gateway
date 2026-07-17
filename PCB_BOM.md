@@ -54,11 +54,11 @@
 ### SWD Debug Interface
 
 - SWD Header
+  - 3.3V
   - SWDIO
   - SWCLK
   - NRST
   - GND
-  - 3.3V
 
 - ST-Link V2 Programmer
 
