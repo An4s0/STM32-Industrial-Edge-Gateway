@@ -11192,26 +11192,24 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -12.7 11.16 0)
+			(property "Reference" "U2"
+				(at 0 15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left bottom)
 				)
 			)
 			(property "Value" "TLV76733DRVR"
-				(at -12.7 -14.16 0)
+				(at 0 12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left bottom)
 				)
 			)
 			(property "Footprint" "TLV76733DRVR:SON65P200X200X80-7N"
@@ -11333,10 +11331,21 @@
 					(justify bottom)
 				)
 			)
+			(property "Sim.Pins" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(symbol "TLV76733DRVR_0_0"
 				(rectangle
-					(start -12.7 -10.16)
-					(end 12.7 10.16)
+					(start -12.7 10.16)
+					(end 12.7 -10.16)
 					(stroke
 						(width 0.41)
 						(type default)
@@ -11449,6 +11458,26 @@
 						(effects
 							(font
 								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLV76733DRVR_1_1"
+				(pin input line
+					(at -17.78 -3.81 0)
+					(length 5.08)
+					(name "EP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -18059,7 +18088,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 77.1652 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -18151,7 +18180,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 218.1352 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -18243,7 +18272,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 129.8448 242.57 0)
 			(hide yes)
 			(show_name no)
@@ -19016,7 +19045,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 334.01 224.79 0)
 			(hide yes)
 			(show_name no)
@@ -19099,7 +19128,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT583_MP2338_MNP"
+		(property "Footprint" "MP2338GTL:MP2338GTL"
 			(at 138.43 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -19290,7 +19319,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 378.1552 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -19749,7 +19778,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342"
 			(at 87.63 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -19841,7 +19870,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 98.7552 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -19934,7 +19963,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
 			(at 351.79 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -20094,8 +20123,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 198.628 33.274 90)
+		(property "Value" "90.9k"
+			(at 199.644 33.274 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20611,7 +20640,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 108.9152 250.19 0)
 			(hide yes)
 			(show_name no)
@@ -21666,7 +21695,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 116.5352 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -21942,7 +21971,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 367.9952 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -22181,10 +22210,92 @@
 		(pin "1"
 			(uuid "24c804a3-421d-4bb1-92b5-a3abf8c9b91f")
 		)
+		(pin "7"
+			(uuid "d9211d1e-eb64-42de-b616-9c174547ac5a")
+		)
 		(instances
 			(project "STM32_Industrial_Edge_Gateway_v0.2.0"
 				(path "/abc15c43-296c-4c96-9fe3-be02bbc91336"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 224.79 59.69 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d04b067-920a-461b-8b61-cb1cd7f161fc")
+		(property "Reference" "#PWR082"
+			(at 224.79 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 224.79 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 224.79 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b62a6609-281b-4bb3-ac0c-246a3b914a5a")
+		)
+		(instances
+			(project "STM32_Industrial_Edge_Gateway_v0.2.0"
+				(path "/abc15c43-296c-4c96-9fe3-be02bbc91336"
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)
@@ -22379,7 +22490,7 @@
 				)
 			)
 		)
-		(property "Footprint" "AO3407A:SOT95P280X125-3N"
+		(property "Footprint" "AO3407A:AO3407A"
 			(at 90.17 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -22597,7 +22708,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 373.38 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -23013,7 +23124,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 166.6748 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -23183,7 +23294,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 110.1852 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -23432,7 +23543,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 373.38 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -23513,7 +23624,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 28.9052 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -23772,7 +23883,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 			(at 50.8 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -23963,7 +24074,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 221.9452 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -24134,7 +24245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 40.3352 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -24750,7 +24861,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 60.6552 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -24842,7 +24953,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 127.9652 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -25194,7 +25305,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 91.1352 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -26055,7 +26166,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 88.5952 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -26317,7 +26428,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 102.5652 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -26409,7 +26520,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 87.3252 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -26830,7 +26941,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 211.7852 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -26922,7 +27033,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 143.2052 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -27014,7 +27125,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 98.7552 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -27105,7 +27216,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_RGB_1210"
 			(at 247.65 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -27191,7 +27302,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LAN8742A-CZ-TR:QFN50P400X400X100-25N"
+		(property "Footprint" "LAN8742A:LAN8742A-CZ-TR"
 			(at 59.69 243.84 0)
 			(hide yes)
 			(show_name no)
@@ -27960,7 +28071,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 272.7452 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -28473,7 +28584,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 83.5152 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -28564,7 +28675,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EJ503A:MPD_EJ503A"
+		(property "Footprint" "DC Barrel Jack (5.5 × 2.1mm):EJ503A"
 			(at 36.83 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -28793,7 +28904,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 70.8152 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -30447,7 +30558,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 373.38 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -30684,7 +30795,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 112.7252 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -31012,7 +31123,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 80.9752 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -31796,7 +31907,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 107.95 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -31966,7 +32077,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 251.46 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -32148,7 +32259,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 50.4952 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -32239,7 +32350,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_RGB_1210"
 			(at 247.65 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -32405,7 +32516,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 92.4052 223.52 0)
 			(hide yes)
 			(show_name no)
